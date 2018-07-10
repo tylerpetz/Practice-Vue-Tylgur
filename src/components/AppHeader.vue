@@ -1,15 +1,15 @@
 <template>
     <div class="ui secondary inverted pointing menu">
-        <a href="/" class="active item">
+        <router-link to="/" class="active item">
             <h1>tylgur</h1>
-        </a>
+        </router-link>
         <div class="right menu">
             <div v-if="isLoggedIn" class="horizontal">
-                <a class="item">Galleries</a>
-                <a class="item">Upload</a>
+                <router-link to="/" class="item">Galleries</router-link>
+                <router-link to="/upload" class="item">Upload</router-link>
                 <a class="item" @click="logout">Logout</a>
             </div>
-            <a v-else href="#" class="ui item" @click="login">
+            <a v-else href="#" class="item" @click="login">
                 Login
             </a>
         </div>
